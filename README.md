@@ -14,10 +14,10 @@ This project implements a multi-GPU PyTorch Distributed Data Parallel (DDP) pipe
 
 ### How to Run on Kaggle
 Kaggle clears the working directory when it restarts, so I had to use Kaggle versions to save the model permanently.
-1. **Training:** Do not run `train_ddp.py` interactively. Click **Save Version** -> **Save & Run All (Commit)** to run it in the background on two T4 GPUs.
+1. **Training:** Do not run `src/train_ddp.py` interactively. Click **Save Version** -> **Save & Run All (Commit)** to run it in the background on two T4 GPUs.
 2. **Load Weights:** Click **Add Input**, search for your notebook in **Your Work**, and mount it to get the saved weights.
 3. **Evaluate:** Run the evaluation script using the mounted path: 
-   `--model_path "/kaggle/input/notebooks/username/english-to-telugu-4/nllb-telugu-finetuned"`
+   `--model_path "/kaggle/input/notebooks/gandhisiripuram/english-to-telugu-4/nllb-telugu-finetuned"`
 
 ---
 
