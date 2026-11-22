@@ -1,0 +1,13 @@
+{
+  "model": "facebook/nllb-200-distilled-600M",
+  "split": "devtest",
+  "num_beams": 4,
+  "BLEU": 19.98,
+  "chrF": 56.24,
+  "chrF++": 51.86,
+  "signatures": {
+    "BLEU": "nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.6.0",
+    "chrF": "nrefs:1|case:mixed|eff:yes|nc:6|nw:0|space:no|version:2.6.0",
+    "chrF++": "nrefs:1|case:mixed|eff:yes|nc:6|nw:2|space:no|version:2.6.0"
+  }
+}
