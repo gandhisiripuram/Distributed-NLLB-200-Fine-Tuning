@@ -1,0 +1,152 @@
+!torchrun --nproc_per_node=2 /kaggle/working/train_ddp.py --data /kaggle/input/notebooks/gandhisiripuram/english-to-telugu-2/samanantar_clean_20k.csv
+W1121 20:07:18.934000 63 torch/distributed/run.py:851] 
+W1121 20:07:18.934000 63 torch/distributed/run.py:851] *****************************************
+W1121 20:07:18.934000 63 torch/distributed/run.py:851] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W1121 20:07:18.934000 63 torch/distributed/run.py:851] *****************************************
+config.json: 100%|█████████████████████████████| 846/846 [00:00<00:00, 3.86MB/s]
+tokenizer_config.json: 100%|███████████████████| 564/564 [00:00<00:00, 2.45MB/s]
+
+sentencepiece.bpe.model: downloading bytes:                 |  0.00B            
+sentencepiece.bpe.model: downloading bytes: ████████████████| 3.48MB,  344kB/s  
+sentencepiece.bpe.model: reconstructing file: 100%|█| 4.85MB / 4.85MB,  480kB/s 
+
+tokenizer.json: downloading bytes: ██████                   | 4.19MB            
+tokenizer.json: downloading bytes: █████████████████████████| 7.83MB,  773kB/s  
+tokenizer.json: reconstructing file: 100%|█████████| 17.3MB / 17.3MB, 1.72MB/s  
+special_tokens_map.json: 100%|█████████████| 3.55k/3.55k [00:00<00:00, 1.30MB/s]
+Generating train split: 20000 examples [00:00, 78532.08 examples/s]
+Filter: 100%|██████████████████| 20000/20000 [00:00<00:00, 233505.30 examples/s]
+README.md: 100%|███████████████████████████| 75.5k/75.5k [00:00<00:00, 66.5MB/s]
+Resolving data files: 100%|████████████████| 233/233 [00:00<00:00, 23742.11it/s]
+Resolving data files: 100%|████████████████| 228/228 [00:00<00:00, 22417.34it/s]
+eng_Latn.jsonl: 100%|████████████████████████| 423k/423k [00:00<00:00, 27.2MB/s]
+eng_Latn.jsonl: 100%|████████████████████████| 440k/440k [00:00<00:00, 69.0MB/s]
+Generating dev split: 997 examples [00:00, 94769.88 examples/s]
+Generating devtest split: 1012 examples [00:00, 155789.31 examples/s]
+Resolving data files: 100%|████████████████| 233/233 [00:00<00:00, 22016.10it/s]
+Resolving data files: 100%|████████████████| 228/228 [00:00<00:00, 25428.14it/s]
+tel_Telu.jsonl: 100%|████████████████████████| 637k/637k [00:00<00:00, 25.6MB/s]
+tel_Telu.jsonl: 100%|████████████████████████| 662k/662k [00:00<00:00, 60.8MB/s]
+Generating dev split: 997 examples [00:00, 144696.23 examples/s]
+Generating devtest split: 1012 examples [00:00, 138768.00 examples/s]
+Resolving data files: 100%|████████████████| 233/233 [00:00<00:00, 24947.61it/s]
+Resolving data files: 100%|████████████████| 228/228 [00:00<00:00, 25011.80it/s]
+Resolving data files: 100%|████████████████| 233/233 [00:00<00:00, 26267.24it/s]
+Resolving data files: 100%|████████████████| 228/228 [00:00<00:00, 27500.47it/s]
+Filter: 100%|███████████████████| 20000/20000 [00:00<00:00, 84117.66 examples/s]
+Map: 100%|██████████████████████| 20000/20000 [00:01<00:00, 11138.31 examples/s]
+Resolving data files: 100%|████████████████| 233/233 [00:00<00:00, 25974.03it/s]
+Resolving data files: 100%|████████████████| 228/228 [00:00<00:00, 25274.91it/s]
+Resolving data files: 100%|████████████████| 233/233 [00:00<00:00, 26641.03it/s]
+Resolving data files: 100%|████████████████| 228/228 [00:00<00:00, 22749.58it/s]
+/usr/local/lib/python3.13/dist-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.
+  return func(*args, **kwargs)
+[rank0]:[W1121 20:08:21.964907151 ProcessGroupNCCL.cpp:5188] Guessing device ID based on global rank. This can cause a hang if rank to GPU mapping is heterogeneous. You can specify device_id in init_process_group()
+Training pairs: 20000 (leakage filter removed 0 of 20000)
+Label check, first label tokens: ['tel_Telu', '▁మరణ']
+
+pytorch_model.bin: downloading bytes: █▊                    |  203MB, 14.5MB/s  
+pytorch_model.bin: downloading bytes: ██▌                   |  290MB, 23.1MB/s  
+pytorch_model.bin: downloading bytes: ███▌                  |  400MB, 32.5MB/s  
+pytorch_model.bin: downloading bytes: ██████▏               |  690MB, 58.5MB/s  
+pytorch_model.bin: downloading bytes: ███████               |  784MB, 66.6MB/s  
+Resolving data files: 100%|█████████████████| 233/233 [00:00<00:00, 9785.55it/s]
+
+Resolving data files: 100%|█████████████████| 228/228 [00:00<00:00, 8109.20it/s]
+pytorch_model.bin: downloading bytes: ████████▋             |  970MB, 81.2MB/s  
+pytorch_model.bin: reconstructing file:  52%|███   | 1.27GB / 2.46GB,  103MB/s  
+pytorch_model.bin: downloading bytes: ███████████▌          | 1.30GB,  106MB/s  
+Resolving data files: 100%|█████████████████| 233/233 [00:00<00:00, 6295.00it/s]
+Resolving data files: 100%|█████████████████| 228/228 [00:00<00:00, 5133.54it/s]
+pytorch_model.bin: downloading bytes: ████████████▉         | 1.45GB,  117MB/s  
+pytorch_model.bin: downloading bytes: ██████████████▏       | 1.59GB,  124MB/s  
+pytorch_model.bin: downloading bytes: ██████████████▌       | 1.63GB,  127MB/s  
+pytorch_model.bin: reconstructing file:  90%|█████▍| 2.21GB / 2.46GB,  168MB/s  
+Resolving data files: 100%|████████████████| 233/233 [00:00<00:00, 23809.79it/s]
+Resolving data files: 100%|████████████████| 228/228 [00:00<00:00, 20960.03it/s]
+Resolving data files: 100%|████████████████| 233/233 [00:00<00:00, 20072.15it/s]
+Resolving data files: 100%|████████████████| 228/228 [00:00<00:00, 22600.65it/s]
+pytorch_model.bin: downloading bytes: ██████████████████████| 1.64GB,  128MB/s  
+pytorch_model.bin: reconstructing file: 100%|██████| 2.46GB / 2.46GB,  199MB/s  
+Resolving data files: 100%|████████████████| 233/233 [00:00<00:00, 22953.07it/s]
+Resolving data files: 100%|████████████████| 228/228 [00:00<00:00, 24738.75it/s]
+Resolving data files: 100%|████████████████| 233/233 [00:00<00:00, 19743.28it/s]
+Resolving data files: 100%|████████████████| 228/228 [00:00<00:00, 24578.53it/s]
+Loading weights: 100%|██████████████████████| 512/512 [00:00<00:00, 7218.12it/s]
+Loading weights: 100%|██████████████████████| 512/512 [00:00<00:00, 6980.05it/s]
+
+generation_config.json: 100%|███████████████████| 189/189 [00:00<00:00, 324kB/s]
+
+model.safetensors: downloading bytes: ████████▎             |  932MB, 76.6MB/s  
+model.safetensors: downloading bytes: ████████▉             | 1.00GB, 80.6MB/s  
+model.safetensors: downloading bytes: ██████████▊           | 1.21GB, 94.7MB/s  
+model.safetensors: downloading bytes: ████████████▏         | 1.36GB,  105MB/s  
+model.safetensors: reconstructing file:  64%|███▊  | 1.59GB / 2.46GB,  107MB/s  
+model.safetensors: downloading bytes: ██████████████▋       | 1.64GB,  125MB/s  
+model.safetensors: reconstructing file:  89%|█████▎| 2.19GB / 2.46GB,  160MB/s  
+model.safetensors: downloading bytes: ██████████████████████| 1.64GB,  125MB/s  
+model.safetensors: reconstructing file: 100%|██████| 2.46GB / 2.46GB,  198MB/s  
+
+{"epoch": 0, "dev_chrf++": 48.66}
+epoch 1 step 0/5000 loss 2.6980
+epoch 1 step 500/5000 loss 1.8836
+epoch 1 step 1000/5000 loss 3.3215
+epoch 1 step 1500/5000 loss 1.5135
+epoch 1 step 2000/5000 loss 0.6839
+epoch 1 step 2500/5000 loss 1.4938
+epoch 1 step 3000/5000 loss 2.6531
+epoch 1 step 3500/5000 loss 1.7182
+epoch 1 step 4000/5000 loss 2.1359
+epoch 1 step 4500/5000 loss 1.5747
+
+Writing model shards: 100%|███████████████████████| 1/1 [00:03<00:00,  3.01s/it]
+{"epoch": 1, "train_loss": 1.9105, "epoch_time_s": 4905.4, "samples_per_s": 4.08, "world_size": 2, "dev_chrf++": 46.07, "saved": true}
+epoch 2 step 0/5000 loss 2.0695
+epoch 2 step 500/5000 loss 1.8041
+epoch 2 step 1000/5000 loss 1.3625
+epoch 2 step 1500/5000 loss 1.4111
+epoch 2 step 2000/5000 loss 1.9327
+epoch 2 step 2500/5000 loss 1.2951
+epoch 2 step 3000/5000 loss 1.1374
+epoch 2 step 3500/5000 loss 2.7396
+epoch 2 step 4000/5000 loss 1.7501
+epoch 2 step 4500/5000 loss 2.0532
+
+{"epoch": 2, "train_loss": 1.5884, "epoch_time_s": 4900.4, "samples_per_s": 4.08, "world_size": 2, "dev_chrf++": 45.21}
+epoch 3 step 0/5000 loss 1.1839
+epoch 3 step 500/5000 loss 0.7012
+epoch 3 step 1000/5000 loss 1.6037
+epoch 3 step 1500/5000 loss 1.3326
+epoch 3 step 2000/5000 loss 1.4586
+epoch 3 step 2500/5000 loss 1.5776
+epoch 3 step 3000/5000 loss 1.9657
+epoch 3 step 3500/5000 loss 0.7661
+epoch 3 step 4000/5000 loss 1.2521
+epoch 3 step 4500/5000 loss 0.7677
+
+{"epoch": 3, "train_loss": 1.3562, "epoch_time_s": 4901.5, "samples_per_s": 4.08, "world_size": 2, "dev_chrf++": 44.79}
+epoch 4 step 0/5000 loss 0.6606
+epoch 4 step 500/5000 loss 0.5951
+epoch 4 step 1000/5000 loss 0.7378
+epoch 4 step 1500/5000 loss 1.0404
+epoch 4 step 2000/5000 loss 1.5520
+epoch 4 step 2500/5000 loss 0.7948
+epoch 4 step 3000/5000 loss 1.4855
+epoch 4 step 3500/5000 loss 0.8965
+epoch 4 step 4000/5000 loss 0.9299
+epoch 4 step 4500/5000 loss 0.2835
+
+{"epoch": 4, "train_loss": 1.189, "epoch_time_s": 4903.3, "samples_per_s": 4.08, "world_size": 2, "dev_chrf++": 43.8}
+epoch 5 step 0/5000 loss 2.0887
+epoch 5 step 500/5000 loss 1.0652
+epoch 5 step 1000/5000 loss 0.5800
+epoch 5 step 1500/5000 loss 1.5564
+epoch 5 step 2000/5000 loss 0.7429
+epoch 5 step 2500/5000 loss 0.6391
+epoch 5 step 3000/5000 loss 0.9895
+epoch 5 step 3500/5000 loss 1.3580
+epoch 5 step 4000/5000 loss 0.6194
+epoch 5 step 4500/5000 loss 0.7214
+
+{"epoch": 5, "train_loss": 1.0788, "epoch_time_s": 4897.2, "samples_per_s": 4.08, "world_size": 2, "dev_chrf++": 44.25}
+Best FLORES+ dev chrF++: 46.07. Model saved to ./nllb-telugu-finetuned
