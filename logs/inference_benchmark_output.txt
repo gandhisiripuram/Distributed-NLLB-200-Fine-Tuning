@@ -1,9 +1,0 @@
-Loading facebook/nllb-200-distilled-600M...
-
---- Running CPU Benchmark ---
-CPU Time: 1.838 seconds
-
---- Running GPU Benchmark ---
-GPU Time: 0.104 seconds
-
-Total Acceleration: 17.70x speedup on GPU
