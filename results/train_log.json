@@ -1,0 +1,67 @@
+{
+  "args": {
+    "data": "/kaggle/input/notebooks/gandhisiripuram/english-to-telugu-2/samanantar_clean_20k.csv",
+    "src_col": "english",
+    "tgt_col": "telugu",
+    "n_train": 20000,
+    "epochs": 5,
+    "batch_size": 2,
+    "lr": 5e-05,
+    "warmup_ratio": 0.05,
+    "max_len": 128,
+    "dev_batch_size": 16,
+    "seed": 42,
+    "out_dir": "./nllb-telugu-finetuned"
+  },
+  "world_size": 2,
+  "train_pairs": 20000,
+  "leakage_removed": 0,
+  "best_dev_chrf++": 46.07,
+  "history": [
+    {
+      "epoch": 0,
+      "dev_chrf++": 48.66
+    },
+    {
+      "epoch": 1,
+      "train_loss": 1.9105,
+      "epoch_time_s": 4905.4,
+      "samples_per_s": 4.08,
+      "world_size": 2,
+      "dev_chrf++": 46.07,
+      "saved": true
+    },
+    {
+      "epoch": 2,
+      "train_loss": 1.5884,
+      "epoch_time_s": 4900.4,
+      "samples_per_s": 4.08,
+      "world_size": 2,
+      "dev_chrf++": 45.21
+    },
+    {
+      "epoch": 3,
+      "train_loss": 1.3562,
+      "epoch_time_s": 4901.5,
+      "samples_per_s": 4.08,
+      "world_size": 2,
+      "dev_chrf++": 44.79
+    },
+    {
+      "epoch": 4,
+      "train_loss": 1.189,
+      "epoch_time_s": 4903.3,
+      "samples_per_s": 4.08,
+      "world_size": 2,
+      "dev_chrf++": 43.8
+    },
+    {
+      "epoch": 5,
+      "train_loss": 1.0788,
+      "epoch_time_s": 4897.2,
+      "samples_per_s": 4.08,
+      "world_size": 2,
+      "dev_chrf++": 44.25
+    }
+  ]
+}

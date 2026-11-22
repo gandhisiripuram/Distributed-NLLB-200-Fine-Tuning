@@ -1,0 +1,13 @@
+{
+  "model": "/kaggle/input/notebooks/gandhisiripuram/english-to-telugu-5/nllb-telugu-finetuned",
+  "split": "devtest",
+  "num_beams": 4,
+  "BLEU": 18.15,
+  "chrF": 53.09,
+  "chrF++": 48.94,
+  "signatures": {
+    "BLEU": "nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.6.0",
+    "chrF": "nrefs:1|case:mixed|eff:yes|nc:6|nw:0|space:no|version:2.6.0",
+    "chrF++": "nrefs:1|case:mixed|eff:yes|nc:6|nw:2|space:no|version:2.6.0"
+  }
+}

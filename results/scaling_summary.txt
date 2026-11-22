@@ -1,0 +1,18 @@
+{
+  "world_size": 2,
+  "batch_size_per_gpu": 2,
+  "seq_len": 128,
+  "amp_fp16": true,
+  "n_params": 615073792,
+  "allreduce_size_GB": 2.46,
+  "allreduce_ms": 604.6,
+  "allreduce_algbw_GBps": 4.07,
+  "allreduce_busbw_GBps": 4.07,
+  "step_ms": 985.8,
+  "samples_per_s_all_gpus": 4.06,
+  "peak_memory_GB_rank0": 14.79
+}
+Speedup vs 1 GPU: 0.83x
+Scaling efficiency: 42 percent
+Extra time per step vs 1 GPU: 576.4 ms (communication and synchronisation, partly overlapped with compute)
+Full gradient all-reduce alone: 604.6 ms

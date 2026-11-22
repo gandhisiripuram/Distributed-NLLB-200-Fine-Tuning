@@ -1,0 +1,10 @@
+{
+  "world_size": 1,
+  "batch_size_per_gpu": 2,
+  "seq_len": 128,
+  "amp_fp16": true,
+  "n_params": 615073792,
+  "step_ms": 409.4,
+  "samples_per_s_all_gpus": 4.88,
+  "peak_memory_GB_rank0": 12.33
+}

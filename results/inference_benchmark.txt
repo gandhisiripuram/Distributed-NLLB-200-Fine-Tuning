@@ -1,0 +1,5 @@
+64 sentences, batch size 16, greedy decoding
+CPU threads: 2
+CPU: {"device": "cpu", "median_time_s": 121.115, "sentences_per_s": 0.53, "generated_tokens_per_s": 23.3, "timed_runs": 1}
+GPU: {"device": "cuda", "median_time_s": 7.055, "sentences_per_s": 9.07, "generated_tokens_per_s": 400.6, "timed_runs": 3}
+GPU speedup over CPU: 17.2x (same sentences and settings, 2 CPU threads)
