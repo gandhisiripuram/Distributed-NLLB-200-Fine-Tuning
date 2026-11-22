@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.venv/
+venv/
+env/
+
+# Jupyter / Kaggle
+.ipynb_checkpoints/
+.virtual_documents/
+
+# Model checkpoints & large weights
+nllb-telugu-finetuned/
+*.safetensors
+*.bin
+*.pt
+*.pth
+
+# Local datasets & secrets
+*.csv
+.env
+
+# OS & Editors
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
